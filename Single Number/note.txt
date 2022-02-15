@@ -1,0 +1,18 @@
+bit manupulation
+
+by just using XOR through the whole array
+A ^ A = 0  & A^B^A = B
+
+in c :
+
+class Solution {
+    public:
+        int singleNumber(int A[], int n) {
+            int result=A[0];
+            for(int i=1;i<n;i++)
+            {
+                result= result^A[i];  /* Get the xor of all elements */
+            }
+            return result;
+        }
+    };
